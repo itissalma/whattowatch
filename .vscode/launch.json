@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-WhattowatchApplication<whattowatch>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.whattowatch.WhattowatchApplication",
+            "projectName": "whattowatch",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
