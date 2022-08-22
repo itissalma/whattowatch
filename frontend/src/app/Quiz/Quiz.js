@@ -21,8 +21,22 @@ const Quiz = () =>{
         },
     ]
     return(
-        <div className="w-screen h-screen bg-primary-200">
-            <MultiSelect label="Question 1" items={selectItems} />  
+        <div className="w-screen h-screen bg-black flex flex-col justify-center items-center">
+           
+            <div className="grid lg:grid-cols-2 xs:grid-cols-1 gap-6 w-4/5">
+                    <MultiSelect label="Question 1" items={selectItems} />  
+                    <MultiSelect label="Question 2" items={selectItems} />  
+                    <MultiSelect label="Question 3" items={selectItems} />  
+                    <MultiSelect label="Question 4" items={selectItems} />  
+                    <MultiSelect label="Question 5" items={selectItems} />  
+                    <MultiSelect label="Question 6" items={selectItems} />  
+                    <MultiSelect label="Question 7" items={selectItems} />  
+
+
+            </div>
+            <div className='my-12'>
+                <button className='p-4'>Find Now</button>
+            </div>
         </div>
     )
 }

@@ -13,7 +13,11 @@ module.exports = {
       
         'primary' : {
           100: '#FCC537',
-          200:  '#E1A302'
+          200:  '#E1A302',
+          "alpha100" :  '#FCC53780',
+          'whitealpha' :'#FFFFFF80',
+          'whitealphalight' : '#FFFFFF60',
+
         },
         
         'text' : {
