@@ -36,8 +36,8 @@ const MultiSelectOption = (props) =>{
         }
     }
     const styles = {
-        always: "p-2 text-bold hover:bg-teal-300 hover:text-white",
-        unselected: "bg-white text-black",
+        always: "p-2 font-bold hover:bg-teal-300 hover:text-white",
+        unselected: "bg-white text-primary-100",
         selected: "bg-primary-100 text-white",
         
     }
@@ -88,7 +88,7 @@ const MultiSelect = (props) =>{
         <div className="flex flex-col space-y-2 relative">
             <h4>{label}</h4>
             <div onBlur={handleBlur} ref={ref} tabIndex={6}>
-                <div className="h-16 max-h-max flex-row flex items-center bg-primary-whitealpha hover:bg-primary-whitealphalight rounded-md" onClick={()=>handleOpenClick()}>
+                <div className="h-14 max-h-max flex-row flex items-center bg-primary-whitealpha hover:bg-primary-whitealphalight rounded-xl" onClick={()=>handleOpenClick()}>
                     <div className=" flex flex-row p-2 w-4/5 flex-wrap">{
                   
                         Object.values(selectedItems).map(item=>
@@ -101,8 +101,8 @@ const MultiSelect = (props) =>{
                             
                     }
                  </div>
-                 <div className="ml-auto p-2">
-                     <BsChevronDown className=" text-white stroke-2" />
+                 <div className="ml-auto p-2 mr-2">
+                     <BsChevronDown className=" text-white stroke-1" />
                  </div>
                 </div>
             

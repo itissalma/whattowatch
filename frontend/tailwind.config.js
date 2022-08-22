@@ -27,6 +27,7 @@ module.exports = {
       },
       backgroundImage: {
         'homebg': "url('./background.png')",
+        'quizbg': "url('./quizbg.png')",
         }
     },
   },

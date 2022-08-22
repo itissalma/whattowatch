@@ -1,5 +1,6 @@
 import React from 'react'
-import MultiSelect from '../components/button/MultiSelect'
+import MultiSelect from '../components/MultiSelect'
+import { Link } from 'react-router-dom'
 
 const Quiz = () =>{
     const selectItems=[
@@ -21,7 +22,7 @@ const Quiz = () =>{
         },
     ]
     return(
-        <div className="w-screen h-screen bg-black flex flex-col justify-center items-center">
+        <div className="w-screen h-screen bg-quizbg  bg-cover flex flex-col justify-center items-center">
            
             <div className="grid lg:grid-cols-2 xs:grid-cols-1 gap-6 w-4/5">
                     <MultiSelect label="Question 1" items={selectItems} />  
@@ -34,9 +35,11 @@ const Quiz = () =>{
 
 
             </div>
+            <Link to={'/movie'}>
             <div className='my-12'>
-                <button className='p-4'>Find Now</button>
+                <button className='px-6 py-3 rounded-md'>Find Now</button>
             </div>
+            </Link>
         </div>
     )
 }
