@@ -6,8 +6,11 @@ import javax.persistence.*;
 
 import java.util.ArrayList;
 @Entity
+@Table(name = "movie")
 public class movie {
     @Id
+    @GeneratedValue 
+    private long id;
 
     @Column
     private String name;
@@ -19,7 +22,10 @@ public class movie {
     private float rating;
 
     @Column
-    private List<String> genres=new ArrayList<>();
+    private String genre1;
+
+    @Column 
+    private String genre2;
 
     @Column
     private String mood;
@@ -27,12 +33,31 @@ public class movie {
     @Column
     private String language;
 
-public movie(String name,int year,float rating,List<String> genres, String mood, String language)
+    @Column
+    private String setin;
+
+
+
+public movie()
+{
+    name="";
+    year=0;
+    rating=0;
+    mood="";
+    language="";
+    setin="";
+    genre1="";
+    genre2="";
+
+}
+public movie(String name,int year,float rating, String mood, String language,String setin,String genre1,String genre2)
 {
     this.name=name;
     this.year=year;
     this.rating=rating;
-    this.genres=genres;
+    this.genre1=genre1;
+    this.genre2=genre2;
+    this.setin=setin;
     this.mood=mood;
     this.language=language;
 }
@@ -49,10 +74,19 @@ public float getrating()
 {
     return rating;
 }
-public List<String> getgenres()
+public String getgenre1()
 {
-    return genres;
+    return genre1;
 }
+public String getgenre2()
+{
+    return genre2;
+}
+public String getsetin()
+{
+    return setin;
+}
+
 public String getmood()
 {
     return mood;
